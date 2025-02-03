@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: operator
+  namespace: default
+  uid: 000e916d-c841-4295-bfdf-c2a7c9e12b9a
+  resourceVersion: '3660'
+  creationTimestamp: '2025-01-26T15:22:34Z'
+  labels:
+    k8slens-edit-resource-version: v1
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/default/roles/operator
+rules:
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - ''
+    resources:
+      - pods
+      - deployments
+      - nodes
+      - services

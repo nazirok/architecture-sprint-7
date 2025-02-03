@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: tech
+  namespace: default
+  uid: 0db9cab7-2276-4d56-94a8-c1d479d8017e
+  resourceVersion: '3776'
+  creationTimestamp: '2025-01-26T15:27:36Z'
+  labels:
+    k8slens-edit-resource-version: v1
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/default/roles/tech
+rules:
+  - verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+    apiGroups:
+      - ''
+    resources:
+      - pods
+      - deployments
+      - nodes
+      - services
+      - namespaces

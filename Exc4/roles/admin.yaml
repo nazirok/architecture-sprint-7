@@ -1,0 +1,31 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: admin
+  namespace: default
+  uid: ab4e42fe-6e5b-4f2a-beb0-1d513b125243
+  resourceVersion: '3982'
+  creationTimestamp: '2025-01-26T15:29:46Z'
+  labels:
+    k8slens-edit-resource-version: v1
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/default/roles/admin
+rules:
+  - verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+      - delete
+    apiGroups:
+      - ''
+    resources:
+      - pods
+      - deployments
+      - nodes
+      - services
+      - namespaces
+      - secrets
+      - roles
+      - rolebindings
